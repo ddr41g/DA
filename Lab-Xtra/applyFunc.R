@@ -1,0 +1,7 @@
+rowname=c("row1","row2","row3")
+colname=c("col1","col2","col3")
+matrixname=c("mat1","mat2","mat3")
+A<-array(c(1:9),dim=c(3,3,3),dimname=list(rowname,colname,matrixname))
+var=apply(A,c(1),max(C(1)))
+var=apply(A,c(2),min(A))
+sol=quantile(A,c(0.25,0.5,0.75))

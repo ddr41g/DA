@@ -1,0 +1,1 @@
+print(diag(abs(seq.int(-11, 11))))

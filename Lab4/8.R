@@ -1,0 +1,5 @@
+s <- c("Hello","World")
+x<-grep("W",s)
+print(x)
+s[x]<-paste0(",",s[x])
+print(s)

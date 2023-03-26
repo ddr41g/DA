@@ -1,0 +1,11 @@
+mat1<-matrix(1:4,2,2)
+mat2<-matrix(5:8,2,2)
+
+cat("\nAddition\n")
+print(mat1+mat2)
+cat("\nSubtraction\n")
+print(mat1-mat2)
+cat("\nMultiplication\n")
+print(mat1*mat2)
+cat("\nDivision\n")
+print(mat1/mat2)
