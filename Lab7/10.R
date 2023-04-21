@@ -1,0 +1,7 @@
+data <- c(0,0,0,0,1,2,2,3,4,4,4,5,5,6,7)
+standard_scores <- scale(data)
+quartiles <- quantile(data)
+five_num_summary <- summary(data)
+cat("Standard Score: ", standard_scores, "\n")
+cat("Quartiles: ", quartiles, "\n")
+cat("Five Number Summary: ", five_num_summary, "\n")

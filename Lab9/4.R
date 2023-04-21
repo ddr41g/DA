@@ -1,0 +1,11 @@
+data <- data.frame(x = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+                   y = c(0, 0, 0, 0, 1, 1, 1, 1, 1, 1))
+plot(data, xlim = c(0, 11), ylim = c(-0.2, 1.2), pch = 19, col = ifelse(data$y == 0, "blue", "red"))
+library(e1071)
+svm_model <- svm(y ~ x, data = data, kernel = "linear")
+xrange <- seq(0, 11, by = 0.01)
+yrange <- seq(-0.2, 1.2, by = 0.01)
+grid <- expand.grid(x = xrange, y = yrange)
+colnames(grid) <- c("x", "y")
+z <- predict(svm_model, newdata = grid)
+contour(xrange, yrange, matrix(z, length(xrange), length(yrange)), levels = c(0), add = TRUE, col = "green", lwd = 2)

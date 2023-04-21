@@ -1,0 +1,5 @@
+df <- data.frame(x = seq(1, 10), y = c(3, 5, 7, 10, 12, 14, 15, 17, 20, 22))
+plot(df$x, df$y)
+model <- nls(y ~ a * x^2 + b * x + c, data = df, start = list(a = 1, b = 1, c = 1))
+summary(model)
+lines(df$x, predict(model), col = "red")

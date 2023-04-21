@@ -1,0 +1,6 @@
+data1 <- c(14, 14, 14, 14, 14)
+data2 <- c(11, 12, 14, 16, 17)
+data3 <- c(1, 3, 6, 8, 42)
+hist(data1)
+hist(data2)
+hist(data3)
